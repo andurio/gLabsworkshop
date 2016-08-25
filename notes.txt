@@ -1,3 +1,154 @@
+IRON HACK - DAY 1
+
+(Ironhack.com:3000 - Sciamano1)
+
+redirected from Ironhack to a Udacity course…
+HOW THE WEB WORKS
+
+<b></b>
+<em>
+<a href=“www.askultura.com”>Askultura</a>
+	anchor tab with an href attribute
+image tag: <img src=“url” alt=“text”>
+	src is the attribute with a link to the image to download; alt is another attribute that is text that displays if the image doesn’t load…for broken requests. also for blind people. This is a void tag so there is no </img> (closing tag)
+
+<br> break
+<p>paragraph</p>
+
+inline/block
+<br> is inline: it just ends a line (just text)
+<p> is block: makes an invisible box (that can have height and width)
+
+two more elements…
+<span> is inline
+<div> is block
+…they don’t do anything other than contain content and the style can be adjusted (CSS classes)
+
+Document Structure
+<!DOCTYPE HTML> - this is the doctype
+<html>
+<head> - also references to CSS and JS files
+	<title>Title Of The Page</title>
+</head>
+<body>
+<b>content of the document</b>
+</body>
+</html>
+
+
+URL - uniform resource locator
+
+http:// - protocol
+www.askultura.com - host of the server that has the document we want to access
+/shows - path, or the document we are going to fetch. In this case the shows page of askultura.com
+
+QUERY (or GET) PARAMETERS
+http://example.com/foo?p=1&q=eek
+name=value
+the first query parameter is separated from he url by a ‘?’, all following QPs are separated using ‘&’
+what are QPs for? the parameters can affect many different things…handy uses. tbd later
+
+FRAGMENTS
+another piece added to url’s
+separated by a ‘#’ 
+that is NOT sent to the server, it is only shown in the browser
+
+PORT
+http://localhost:8000/
+‘:8000’ is the port
+get used to using localhost!
+
+GET
+http is the main protocol of the web - hyper text transfer protocol
+eg. http://www.example.com/foo
+the request line is: GET /foo http/1.1
+GET - method (GET and also POST is used)
+/foo - path
+http/1.1 - version (1.1 or 1.0)
+
+MOST COMMON METHOD
+GET
+
+MAKING REQUESTS
+Headers…a proper header format is:
+name: value
+Host: www.askultura.com
+User-Agent: who is making the request
+User-Agent is one of the most important headers
+I promise to use User Agents appropriately when writing my web software
+
+HTTP RESPONSES
+Browser makes a request to a server; servers responds
+a basic http response to a browser request eg: GET /foo HTTP/1.1
+could be:
+HTTP/1.1 200 OK 
+where HTTP/1.1 is the status line
+200 is the status code
+OK is the reason phrase
+there are several status codes that are common. they are:
+200 OK - document is found
+302 Found - document is located somewhere else. do something different to find the document
+404 Not found - document wasn’t found. error on the browser side.
+500 Server Error - server broke trying to find your request. error on the server side.
+
+RESPONSE HEADERS
+HTTP/1.1 200 OK
+Date: Tue Mar 2012 04:33:33 GMT - always there
+Server: Apache /2.2.3 - similar to user agent header on request. identifies server agent handling the response. don’t give this out!
+Content-Type: text/html; - very helpful to id the type of document the server is delivering to the browser
+Content-Length: 1539 - not super relevant
+
+WEB APPLICATIONS
+how to run programs on servers. Servers respond to HTTP requests from browsers
+There are two main types of responses:
+1. Static: pre-written files. eg image
+2. Dynamic: made on the fly (web applications)
+So web applications: 
+1. live on a server
+2. speak http
+3. generates responses that the browser requests
+
+…end of audacity course. back to Ironhack…
+
+…next request is to download SublimeText3 (I’m sticking with Opensource Atom)….check that, i have decided to try ST3
+
+…installing Packages
+Emmet
+
+…installed nodejs for javascript https://nodejs.org/en/
+…installed a bunch of Packages and got my ST3 Keyboard Shortcuts pdf together
+
+GETTING IN TERMINAL
+customized and learned some terminal action
+
+TIME TO GET INTO GIT & GITHUB
+- revision or version control system (VCS)
+- manages how source code changes over time
+- Git is the program that runs on The Judge, Github is where my work is stored online
+
+been forwarded to this video Hackerschool: Git For Beginners 1/4 https://www.youtube.com/watch?v=pyPfNOs7vGk
+
+Version Control Software
+1. Backing things up
+    1. installing and configuring git
+    2. introducing the command line
+    3. creating repositories (git init)
+    4. adding and tracking files (git add)
+    5. ignoring things (.gitignore files)
+    6. saving work (git commit -m)
+    7. viewing history (git log)
+    8. seeing changes (git diff) 
+2. The multiverse
+    1. patch mode
+    2. multiple dimensions (git branch)
+    3. moving between worlds (git checkout)
+    4. bringing things together (git merge)
+    5. fixing merge conflicts
+3. time travel & mistakes
+4. working with others
+
+Associated my user name and email and change color and made ST3 default text editor
+
 INIT
 git init is used to create a repository
 
@@ -57,4 +208,33 @@ git log shows us all commits that were made
 QUICK COMMIT MESSAGES
 git log --oneline shows summary of all commits
 
-BALL bags
+GIT DIFF
+to see what we changed within the files…
+git log --oneline….then
+git diff a6f9641 ea6dfe1 (those are the codes for each commit)
+
+GIT DIFF (alone)
+git diff alone will show what has been changed since the last commit
+
+On to Part 2 - The Multiverse of Git - https://www.youtube.com/watch?v=CXWLtRbvTNg
+
+what if we don’t commit early, commit often? chances are that when you’re working intensely you’re not committing often/ wouldn’t it be nice to be able to SPLIT up many changes into smaller commits after the fact?… introducing
+
+PATCH MODE
+git add -p takes us into patch mode where you can say y/n/etc
+
+BRANCHING - multiple dimensions in a single repo
+branches are self-contained universes
+eg. if we have features we want to add to a webpage….put them on different branches so that they don’t interfere with whats been done
+if features don’t work we can just ignore that branch
+
+SHOW ALL BRANCHES
+git branch
+
+CREATING A NEW BRANCH
+git branch alternate
+
+SWITCHING BRANCHES
+git checkout alternate
+
+git branch shows you what branch you are working in
