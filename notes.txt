@@ -1,1 +1,21 @@
-notes.txt
+Init
+git init is used to create a repository
+
+Status
+git status tells me the state of my working directory
+
+git doesnt automatically keep track of stuff unless you tell it to
+
+Add
+git add tells git to track specific files or folders
+
+Ignoring Things
+crated another file in ST3 called '.gitignore'. in that file I type the name of the file or directory that i want git to ignore
+
+Add everything
+git add .
+^ that adds everything in the depository
+
+Git doesnt automatically save the changes that we work on, it must be told to do so
+
+lets try someting
