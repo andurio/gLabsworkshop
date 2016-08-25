@@ -56,3 +56,5 @@ git log shows us all commits that were made
 
 QUICK COMMIT MESSAGES
 git log --oneline shows summary of all commits
+
+BALL bags
