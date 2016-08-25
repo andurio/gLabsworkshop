@@ -1,21 +1,58 @@
-Init
+INIT
 git init is used to create a repository
 
-Status
+STATUS
 git status tells me the state of my working directory
 
 git doesnt automatically keep track of stuff unless you tell it to
 
-Add
+ADD
 git add tells git to track specific files or folders
 
-Ignoring Things
+Ignoring Things GITIGNORE
 crated another file in ST3 called '.gitignore'. in that file I type the name of the file or directory that i want git to ignore
 
-Add everything
+ADD EVERYTHING
 git add .
 ^ that adds everything in the depository
 
 Git doesnt automatically save the changes that we work on, it must be told to do so
 
-lets try someting
+COMMIT
+git commit -m “add note text here”
+
+PUSH
+alright, so fas so good. now time to PUSH my first commits up to Github aka connect local repo to GitHub repo….
+ in terminal:  git remote add origin https://github.com/andurio/glabsworkshop.git
+
+to check that the remote origin has been set up correctly terminal: git remove -v
+
+listing is twice for Push and Fetch
+
+Time to finally make first PUSH…
+git push
+
+GOOD GIT HELP for when the workflow increases: http://readwrite.com/2013/10/02/github-for-beginners-part-2/
+
+How Commits Work - 3 box model
+1. repository - where git actually stores stuff internally
+2. staging area - imaginary place that git uses what we’re going to commit
+3. working directory - folder on desktop where files are
+    1. notes.txt
+
+Simplified way to commit to online repo:
+1. git add <file> or git add . (to add all)
+2. git commit -m 
+
+COMMIT EARLY, COMMIT OFTEN - commit after every meaningful change
+AND WRITE USEFUL -M/COMMIT MESSAGES
+
+commit messages/guidelines
+-write in the present “change”
+-write “what this will do”
+
+COMMIT LOGS
+git log shows us all commits that were made
+
+QUICK COMMIT MESSAGES
+git log --oneline shows summary of all commits
