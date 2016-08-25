@@ -145,6 +145,9 @@ Version Control Software
     4. bringing things together (git merge)
     5. fixing merge conflicts
 3. time travel & mistakes
+    1. moving thru time (git checkout revisited)
+    2. undoing things (git revert)
+    3. really undoing things (git reset)
 4. working with others
 
 Associated my user name and email and change color and made ST3 default text editor
@@ -223,6 +226,8 @@ what if we don’t commit early, commit often? chances are that when you’re wo
 PATCH MODE
 git add -p takes us into patch mode where you can say y/n/etc
 
+now, BRANCHES…
+
 BRANCHING - multiple dimensions in a single repo
 branches are self-contained universes
 eg. if we have features we want to add to a webpage….put them on different branches so that they don’t interfere with whats been done
@@ -234,7 +239,27 @@ git branch
 CREATING A NEW BRANCH
 git branch alternate
 
-SWITCHING BRANCHES
+SWITCHING BRANCHES - CHECKOUT
 git checkout alternate
 
 git branch shows you what branch you are working in
+
+MERGING BRANCHES
+git merge alternate
+
+-conflicts occur if we make changes that git can’t automatically combine
+-to fix a conflict, edit the file to be the way we want, then save and commit
+
+HEAD & checkout
+checkout moves the HEAD pointer around
+
+we can visit an old coming using git checkout
+process:
+git log --oneline, then choose a comment from the past. then,
+git checkout 23aff97 (sequence from that commit)
+
+result: you go back to where that commit info was
+
+TO GO BACK! 
+git checkout master
+
